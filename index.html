@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>Bedrock Projects</title>
+  <title>Bedrock Games</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" href="bedrockgamesfavicon.png" />
-  <link rel="shortcut-icon" href="bedrockgamesfavicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="/js/main.js"></script>
-  
+  <script src="/js/main.js" defer></script>
+
   <style>
     :root{
       --bg: linear-gradient(135deg, #020208 0%, #0a0a15 50%, #04040a 100%);
@@ -40,9 +39,7 @@
       overflow-x: hidden;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     /* Background effects */
     canvas#bg {
@@ -185,12 +182,15 @@
       border: 1px solid rgba(255,255,255,0.12);
       position: relative;
       overflow: hidden;
+      flex: 0 0 68px;
     }
 
+    /* fix: make logo img preserve aspect ratio and never stretch */
     .logo img {
-      width: 54px;
-      height: 54px;
-      border-radius: 12px;
+      width: 90%;
+      height: auto;
+      max-height: 90%;
+      object-fit: contain;
       display: block;
     }
 
@@ -206,18 +206,9 @@
       text-shadow: 0 0 30px rgba(142,246,193,0.3);
     }
 
-    .subtitle {
-      color: var(--muted);
-      font-size: 16px;
-      font-weight: 500;
-      margin-top: 8px;
-    }
+    .subtitle { color: var(--muted); font-size: 16px; font-weight: 500; margin-top: 8px; }
 
-    .controls {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
+    .controls { display: flex; gap: 12px; align-items: center; }
 
     .stealth-btn {
       padding: 12px 18px;
@@ -260,9 +251,7 @@
       box-shadow: 0 0 30px rgba(142,246,193,0.15);
     }
 
-    .search-bar::placeholder {
-      color: var(--muted);
-    }
+    .search-bar::placeholder { color: var(--muted); }
 
     /* Loading spinner */
     #loader {
@@ -276,10 +265,7 @@
       animation: spin 1s linear infinite;
     }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
     /* Games grid */
     .games-grid {
@@ -289,6 +275,7 @@
       margin-top: 32px;
     }
 
+    /* Keep consistent square cards but avoid image stretching */
     .game-card {
       background: var(--gradient-glass);
       border: 1px solid rgba(255,255,255,0.08);
@@ -302,9 +289,9 @@
       box-shadow: var(--shadow-soft);
       text-decoration: none;
       color: inherit;
-      aspect-ratio: 1;
       display: flex;
       flex-direction: column;
+      aspect-ratio: 1 / 1; /* square card */
     }
 
     .game-card::before {
@@ -329,19 +316,12 @@
       transition: left 0.6s ease;
     }
 
-    .game-card:hover::after {
-      left: 100%;
-    }
-
+    .game-card:hover::after { left: 100%; }
     .game-card:hover::before {
       opacity: 1;
       animation: border-dance 2s linear infinite;
     }
-
-    @keyframes border-dance {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+    @keyframes border-dance { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
     .game-card:hover {
       background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
@@ -350,27 +330,24 @@
       border-color: rgba(255,255,255,0.15);
     }
 
+    /* FIX: image area sized and preserved properly */
     .game-image {
       width: 100%;
-      flex-grow: 1;
-      border-radius: 20px 20px 0 0;
-      object-fit: contain;
+      /* allocate most of card to the image; .game-info will be fixed height */
+      height: calc(100% - 64px);
+      display: block;
+      object-fit: contain;   /* preserve original aspect ratio without cropping */
       object-position: center;
-      transition: all 0.3s ease;
-      background: rgba(0,0,0,0.2);
-    }
-
-    .game-card:hover .game-image {
-      transform: scale(1.05);
-      filter: brightness(1.1) contrast(1.1);
+      background: rgba(0,0,0,0.12);
     }
 
     .game-info {
-      padding: 12px 16px;
+      padding: 8px 12px;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      height: 64px; /* fixed bottom info area */
     }
 
     .game-title {
@@ -382,6 +359,8 @@
       transition: all 0.3s ease;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
       line-height: 1.2;
+      padding: 0 4px;
+      word-break: break-word;
     }
 
     .game-card:hover .game-title {
@@ -462,6 +441,8 @@
       h1 { font-size: 28px; }
       .nav-buttons { flex-direction: column; }
       .controls { flex-direction: column; gap: 8px; }
+      .game-image { height: calc(100% - 56px); }
+      .game-info { height: 56px; }
     }
 
     /* Loading animation for game cards */
@@ -497,42 +478,44 @@
     <div class="card">
       <div class="hdr">
         <div>
-          <div class="logo">
-            <img src="bedrockgamesfavicon.png" alt="Bedrock Games logo">
+          <div class="logo" aria-hidden="false" title="Bedrock Games">
+            <img src="bedrockgamesfavicon.png" alt="Bedrock Games logo" />
           </div>
         </div>
+
         <div style="flex-grow: 1; text-align: center;">
           <h1>Bedrock Games</h1>
           <div class="subtitle">Gaming collection</div>
           <p style="color: var(--muted); font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">Some games may be temporarily unavailable</p>
         </div>
+
         <div class="controls">
-          <button class="stealth-btn" onclick="window.location.href='/index.html'">← Home</button>
+          <button class="stealth-btn" onclick="window.location.href='index.html'">← Home</button>
         </div>
       </div>
 
       <input type="text" id="search" class="search-bar" placeholder="Search your gaming arsenal..." onkeyup="searchGames()">
 
-      <div id="loader">
+      <div id="loader" role="status" aria-live="polite">
         <!-- Loading spinner -->
       </div>
 
-      <div id="game-container" class="games-grid">
+      <div id="game-container" class="games-grid" aria-live="polite" aria-busy="true">
         <!-- Games will be populated here -->
       </div>
 
       <div class="nav-buttons">
-        <a href="/index.html" class="nav-btn home-btn">
+        <a href="/index.html" class="nav-btn home-btn" aria-label="Return to homepage">
           🏠 Return to Homepage
         </a>
       </div>
     </div>
   </div>
 
-  <button id="back-to-top" style="display: none;">↑ Back to Top</button>
+  <button id="back-to-top" style="display: none;" aria-hidden="true">↑ Back to Top</button>
 
   <script>
-    // Enhanced starfield background
+    // Enhanced starfield background (unchanged)
     (function(){
       const canvas = document.getElementById('bg');
       if(!canvas) return;
@@ -543,9 +526,9 @@
       const STAR_COUNT = Math.floor((w*h)/2400);
       const stars = [];
       const nebula = [];
-      
+
       function rand(min,max){ return Math.random()*(max-min)+min }
-      
+
       for(let i=0;i<STAR_COUNT;i++){
         stars.push({
           x: Math.random()*w,
@@ -555,7 +538,7 @@
           vx: rand(-0.05,0.05),
           vy: rand(-0.1,0.1),
           t: Math.random()*20,
-          color: Math.random() > 0.88 ? 'rgba(142,246,193,0.9)' : 
+          color: Math.random() > 0.88 ? 'rgba(142,246,193,0.9)' :
                  Math.random() > 0.94 ? 'rgba(168,85,247,0.8)' : 'white',
           twinkleSpeed: rand(0.5, 2.0)
         });
@@ -581,7 +564,7 @@
 
       function draw(){
         ctx.clearRect(0,0,w,h);
-        
+
         const g1 = ctx.createRadialGradient(w*0.3,h*0.3,0,w*0.3,h*0.3,Math.max(w,h)*0.6);
         g1.addColorStop(0,'rgba(10,8,20,0.15)');
         g1.addColorStop(0.5,'rgba(6,4,14,0.25)');
@@ -596,16 +579,16 @@
         ctx.fillRect(0,0,w,h);
 
         const t = Date.now()/3200;
-        
+
         for(const n of nebula){
           n.x += n.vx;
           n.y += n.vy;
-          
+
           if(n.x < -n.r) n.x = w + n.r;
           if(n.x > w + n.r) n.x = -n.r;
           if(n.y < -n.r) n.y = h + n.r;
           if(n.y > h + n.r) n.y = -n.r;
-          
+
           const pulse = Math.abs(Math.sin(t * 0.3 + n.x * 0.001));
           ctx.beginPath();
           ctx.globalAlpha = n.opacity * pulse;
@@ -616,40 +599,40 @@
           ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
           ctx.fill();
         }
-        
+
         for(const s of stars){
           s.x += s.vx * (s.z*2);
           s.y += s.vy * (s.z*2);
-          
-          const twinkle = Math.abs(Math.sin(t * s.twinkleSpeed + s.t)) * 
+
+          const twinkle = Math.abs(Math.sin(t * s.twinkleSpeed + s.t)) *
                          Math.abs(Math.cos(t * s.twinkleSpeed * 0.7 + s.t * 0.5));
-          
+
           if(s.x<0) s.x = w;
           if(s.x>w) s.x = 0;
           if(s.y<0) s.y = h;
           if(s.y>h) s.y = 0;
-          
+
           ctx.beginPath();
           ctx.globalAlpha = 0.7 + 0.3 * s.z * (0.3 + twinkle*0.7);
           ctx.fillStyle = s.color;
           ctx.arc(s.x, s.y, s.r * s.z, 0, Math.PI*2);
           ctx.fill();
-          
+
           if(s.r > 3 || s.color !== 'white'){
             ctx.beginPath();
             ctx.globalAlpha = 0.15 * s.z * twinkle;
             ctx.arc(s.x, s.y, s.r * s.z * 3, 0, Math.PI*2);
             ctx.fill();
           }
-          
+
           if(s.color !== 'white' && twinkle > 0.8){
             ctx.beginPath();
             ctx.globalAlpha = 0.4 * twinkle;
             ctx.fillStyle = s.color;
-            ctx.arc(s.x + rand(-2,2), s.y + rand(-2,2), 1, 0, Math.PI*2);
+            ctx.arc(s.x + (Math.random()*4-2), s.y + (Math.random()*4-2), 1, 0, Math.PI*2);
             ctx.fill();
           }
-          
+
           ctx.globalAlpha = 1;
         }
         requestAnimationFrame(draw);
@@ -661,7 +644,7 @@
     (function createParticles(){
       const container = document.querySelector('.particles');
       if(!container) return;
-      
+
       function createParticle(){
         const particle = document.createElement('div');
         particle.className = 'particle';
@@ -669,56 +652,45 @@
         particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
         particle.style.animationDelay = Math.random() * 5 + 's';
         container.appendChild(particle);
-        
+
         setTimeout(() => {
           particle.remove();
         }, 20000);
       }
-      
+
       for(let i = 0; i < 12; i++){
         setTimeout(createParticle, i * 1000);
       }
-      
+
       setInterval(createParticle, 2000);
     })();
 
-    // Games functionality (keeping your original logic)
+    // Games functionality (fixed & robust)
     let games = [];
-    
+    const FALLBACK_IMG = 'placeholder-game.png'; // put a fallback placeholder in your assets
+
+    function hideLoader() {
+      const loader = document.getElementById('loader');
+      if (loader) loader.style.display = 'none';
+      const container = document.getElementById('game-container');
+      if (container) container.setAttribute('aria-busy', 'false');
+    }
+
     fetch("config/games.json")
-      .then((response) => response.json())
+      .then((response) => {
+        if(!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
       .then((data) => {
-        games = data;
-        const container = document.getElementById("game-container");
-        container.innerHTML = '';
-        
-        data.forEach((project, index) => {
-          const game = document.createElement("a");
-          game.href = project.link;
-          game.className = "game-card";
-          game.style.animationDelay = `${index * 0.1}s`;
-          
-          game.innerHTML = `
-            <img class="game-image" src="${project.imgSrc}" alt="${project.title}" loading="lazy" />
-            <div class="game-info">
-              <h3 class="game-title">${project.title}</h3>
-            </div>
-          `;
-          
-          // Add click animation
-          game.addEventListener('click', function() {
-            this.classList.add('loading');
-          });
-          
-          container.appendChild(game);
-        });
-        
-        document.getElementById("loader").style.display = "none";
+        games = Array.isArray(data) ? data : [];
+        renderGames(games);
+        hideLoader();
       })
       .catch((error) => {
-        console.error("Error:", error);
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("game-container").innerHTML = `
+        console.error("Error loading games.json:", error);
+        hideLoader();
+        const container = document.getElementById("game-container");
+        container.innerHTML = `
           <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--muted);">
             <h3>Unable to load games</h3>
             <p>Please check your connection and try again.</p>
@@ -726,16 +698,67 @@
         `;
       });
 
+    // Render helper
+    function createGameCard(project, index) {
+      const game = document.createElement("a");
+      game.href = project.link || '#';
+      game.className = "game-card";
+      game.setAttribute('role', 'link');
+      game.style.animationDelay = `${index * 0.05}s`;
+      game.innerHTML = `
+        <img class="game-image" src="${project.imgSrc || FALLBACK_IMG}" alt="${escapeHtml(project.title || 'Untitled')}" loading="lazy" />
+        <div class="game-info">
+          <h3 class="game-title">${escapeHtml(project.title || 'Untitled')}</h3>
+        </div>
+      `;
+
+      // ensure the image doesn't stay broken — swap to fallback
+      const img = game.querySelector('.game-image');
+      if (img) {
+        img.onerror = function() {
+          if (this.src !== FALLBACK_IMG) this.src = FALLBACK_IMG;
+        };
+      }
+
+      // Add click animation and gentle loading look
+      game.addEventListener('click', function(e) {
+        // If the link is external and you want to allow navigation - let it normally navigate.
+        // Add a loading class to indicate action
+        this.classList.add('loading');
+      });
+
+      return game;
+    }
+
+    function renderGames(list) {
+      const container = document.getElementById("game-container");
+      container.innerHTML = '';
+      if (!list || list.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--muted);">
+            <h3>No games available</h3>
+            <p>Drop some into <code>config/games.json</code> to populate this page.</p>
+          </div>
+        `;
+        return;
+      }
+
+      list.forEach((project, index) => {
+        const card = createGameCard(project, index);
+        container.appendChild(card);
+      });
+    }
+
     function searchGames() {
       const input = document.getElementById("search");
-      const filter = input.value.toUpperCase();
+      const filter = (input.value || '').trim().toUpperCase();
       const container = document.getElementById("game-container");
       container.innerHTML = "";
-      
-      const filteredGames = games.filter((game) => 
-        game.title.toUpperCase().includes(filter)
+
+      const filteredGames = games.filter((game) =>
+        (game.title || '').toUpperCase().includes(filter)
       );
-      
+
       if (filteredGames.length === 0 && filter) {
         container.innerHTML = `
           <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--muted);">
@@ -745,31 +768,13 @@
         `;
         return;
       }
-      
-      filteredGames.forEach((project, index) => {
-        const game = document.createElement("a");
-        game.href = project.link;
-        game.className = "game-card";
-        game.style.animationDelay = `${index * 0.05}s`;
-        
-        game.innerHTML = `
-          <img class="game-image" src="${project.imgSrc}" alt="${project.title}" loading="lazy" />
-          <div class="game-info">
-            <h3 class="game-title">${project.title}</h3>
-          </div>
-        `;
-        
-        game.addEventListener('click', function() {
-          this.classList.add('loading');
-        });
-        
-        container.appendChild(game);
-      });
+
+      renderGames(filteredGames);
     }
 
     // Back to top functionality
     const backToTopButton = document.getElementById('back-to-top');
-    
+
     window.onscroll = function() {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         backToTopButton.style.display = "block";
@@ -779,60 +784,67 @@
     };
 
     backToTopButton.onclick = function() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     // Keyboard shortcuts
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        document.activeElement.blur();
-      }
-      if (e.key === '/' && e.target.tagName !== 'INPUT') {
+      if (e.key === 'Escape') document.activeElement.blur();
+      if (e.key === '/' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
         e.preventDefault();
         document.getElementById('search').focus();
       }
     });
 
-    // Enhanced game card interactions
+    // Enhanced game card interactions (ripple)
     document.addEventListener('click', (e) => {
       if (e.target.closest('.game-card')) {
         const card = e.target.closest('.game-card');
-        
-        // Create ripple effect
+
         const ripple = document.createElement('div');
         ripple.style.cssText = `
           position: absolute;
           border-radius: 50%;
-          background: rgba(142,246,193,0.3);
+          background: rgba(142,246,193,0.25);
           transform: scale(0);
           animation: ripple 0.6s linear;
           pointer-events: none;
         `;
-        
+
         const rect = card.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         ripple.style.width = ripple.style.height = size + 'px';
         ripple.style.left = (e.clientX - rect.left - size/2) + 'px';
         ripple.style.top = (e.clientY - rect.top - size/2) + 'px';
-        
+
         card.appendChild(ripple);
-        
         setTimeout(() => ripple.remove(), 600);
       }
     });
 
     // Add ripple animation
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes ripple {
-        to {
-          transform: scale(2);
-          opacity: 0;
+    (function addRippleKeyframes(){
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes ripple {
+          to {
+            transform: scale(2);
+            opacity: 0;
+          }
         }
-      }
-    `;
-    document.head.appendChild(style);
+      `;
+      document.head.appendChild(style);
+    })();
+
+    // Simple escape helper for titles inserted into innerHTML
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
   </script>
 </body>
 </html>
