@@ -10,6 +10,11 @@
     "title": "1v1.space"
   },
   {
+    "link": "dot-jms.github.io/Gladihoppers/",
+    "imgSrc": "projects/gladi.png",
+    "title": "Gladihoppers"
+  },
+  {
     "link": "projects/2048/index.html",
     "imgSrc": "projects/2048/thumb.png",
     "title": "2048"
