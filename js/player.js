@@ -62,7 +62,8 @@
     hintTimer = setTimeout(function () {
       if (!loadEl.hidden) hint.textContent = mode === 'sandbox' ? 'Still loading. If it stays blank, your network may block the game host. Compatibility mode can help.' : 'Still loading…';
     }, 9000);
-    $('#p-compat').hidden = m !== 'sandbox';
+    var tg = $('#p-compat'); tg.hidden = cur.plain; tg.textContent = m === 'sandbox' ? 'Compatibility mode' : 'Safe mode';
+    tg.title = m === 'sandbox' ? 'Run the game normally, with full browser features.' : 'Run the game in an isolated sandbox.';
 
     frame = document.createElement('iframe');
     frame.setAttribute('allow', 'fullscreen; autoplay; gamepad; clipboard-write');
@@ -81,7 +82,7 @@
         frame.setAttribute('sandbox', SANDBOX);
         frame.srcdoc = html;
         stage.appendChild(frame);
-      }).catch(function () { if (id === seq) hint.textContent = 'Could not load this game. Try Reload, or Compatibility mode.'; });
+      }).catch(function () { if (id === seq) hint.textContent = 'Could not load this game. Try Reload.'; });
     } else {
       frame.src = cur.link;
       stage.appendChild(frame);
@@ -106,10 +107,7 @@
   $('#p-full').addEventListener('click', function () {
     if (document.fullscreenElement) document.exitFullscreen(); else if (stage.requestFullscreen) stage.requestFullscreen();
   });
-  $('#p-compat').addEventListener('click', function () {
-    if (!cur) return;
-    if (confirm('Compatibility mode runs this game without the safety sandbox, so it can use more browser features (like saves in IndexedDB) but is less isolated from this site. Only use it if the game won\'t work normally. Continue?')) start('plain');
-  });
+  $('#p-compat').addEventListener('click', function () { if (cur) start(mode === 'sandbox' ? 'plain' : 'sandbox'); });
 
   var link = new URLSearchParams(location.search).get('g') || '';
   function find(list, plain) { for (var i = 0; i < list.length; i++) if (list[i].link === link) return { title: list[i].title, link: link, plain: plain }; }
@@ -120,6 +118,6 @@
     var g = find(r[0], true) || find(r[1], false);
     if (!g) { hint.textContent = 'Game not found.'; $('#p-compat').hidden = true; return; }
     cur = g; $('#p-title').textContent = g.title; document.title = 'Bedrock Games';
-    start(g.plain ? 'plain' : 'sandbox');
+    start('plain');
   });
 })();
