@@ -35,6 +35,8 @@
     }
   } catch (e) {}
 
+  if (ok) window.bgLaunchCode = function () { var t = Date.now().toString(36); return t + '.' + hash(t + SALT); };
+
   if (!ok) {
     var here = document.currentScript && document.currentScript.src;
     try { window.stop(); } catch (e) {}
