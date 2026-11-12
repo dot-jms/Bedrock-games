@@ -2,7 +2,7 @@
    Set REQUIRE_BEDROCK_LAUNCH to true to require a valid launch link from Bedrock,
    or false to allow direct visits. This is a browser-side check, not real security. */
 (function () {
-  var REQUIRE_BEDROCK_LAUNCH = true; // Set to false to disable the Bedrock launch check.
+  var REQUIRE_BEDROCK_LAUNCH = false; // Set to false to disable the Bedrock launch check.
   var SALT = 'bdrk-ca45991a75b798231a49a3df';          // must match portal.html in the Bedrock repo
   var MAX_AGE_MS = 2 * 60 * 1000;  // how long a launch link stays valid
 
