@@ -167,6 +167,20 @@
     els.home.appendChild(s);
   }
 
+  /* Thumbnails: drop thumbs/<name>.png (or .jpg/.webp) into the repo. <name> is the game's file name
+     (ugs/cl1on1soccer.html -> cl1on1soccer) or its folder name (projects/slope/ -> slope). See thumbs/README.md. */
+  function slugOf(g) {
+    var m = /^projects\/([^/]+)\//.exec(g.link);
+    if (m) return m[1];
+    var f = g.link.split('/').pop().replace(/\.html?$/i, '');
+    return /^https?:/.test(g.link) ? g.key : f;
+  }
+  function thumbCandidates(g) {
+    var s = encodeURIComponent(slugOf(g)), out = ['png', 'jpg', 'webp'].map(function (e) { return 'thumbs/' + s + '.' + e; });
+    if (g.img) out.push(g.img);
+    return out;
+  }
+
   function cell(g) {
     var d = document.createElement('div'); d.className = 'cell';
     var on = favs.has(g.link);
@@ -179,11 +193,14 @@
     var tag = d.querySelector('.tag');
     if (g.tags.indexOf('flash') !== -1) { tag.textContent = 'Flash'; tag.hidden = false; }
     else if (g.tags.indexOf('minecraft') !== -1) { tag.textContent = 'Minecraft'; tag.hidden = false; }
-    if (g.img) {
+    var cands = thumbCandidates(g), ci = 0;
+    (function tryNext() {
+      if (ci >= cands.length) return;
       var im = new Image(); im.alt = ''; im.decoding = 'async';
       im.onload = function () { art.insertBefore(im, art.firstChild); art.querySelector('.glyph').hidden = true; };
-      im.src = g.img;
-    }
+      im.onerror = tryNext;
+      im.src = cands[ci++];
+    })();
     var fav = d.querySelector('.fav');
     function label(now) { fav.setAttribute('aria-pressed', String(now)); fav.setAttribute('aria-label', (now ? 'Remove ' : 'Add ') + g.title + (now ? ' from favorites' : ' to favorites')); }
     label(on);
