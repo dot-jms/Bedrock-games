@@ -1,6 +1,7 @@
 /* Bedrock Games gate.
    Set REQUIRE_BEDROCK_LAUNCH to true to require a valid launch link from Bedrock,
-   or false to allow direct visits. This is a browser-side check, not real security. */
+   or false to allow direct visits. lock.json is the emergency lock: set "locked": true and everyone,
+   including people already playing, is sent to locked.html. This is a browser-side check, not real security. */
 (function () {
   var REQUIRE_BEDROCK_LAUNCH = true; // Set to false to disable the Bedrock launch check.
   var SALT = 'bdrk-ca45991a75b798231a49a3df';          // must match portal.html in the Bedrock repo
@@ -35,6 +36,33 @@
         }
       }
     } catch (e) {}
+  }
+
+  // Remote lock: lock.json is re-read while the page is open, so locking it in the repo also
+  // kicks out anyone already playing. Network errors are ignored so a Wi-Fi blip doesn't kick people.
+  var base = (document.currentScript && document.currentScript.src || location.href).replace(/[^/]*$/, '');
+  function kick() {
+    try { sessionStorage.removeItem('bg_ok'); } catch (e) {}
+    try { window.stop(); } catch (e) {}
+    location.replace(base + 'locked.html');
+  }
+  if (ok) {
+    var root = document.documentElement, shown = false;
+    root.style.visibility = 'hidden';                       // stay hidden until the first check finishes
+    var reveal = function () { if (!shown) { shown = true; root.style.visibility = ''; } };
+    setTimeout(reveal, 4000);
+    var check = function () {
+      try {
+        fetch(base + 'lock.json?t=' + Date.now(), { cache: 'no-store' })
+          .then(function (r) { return r.ok ? r.json() : { locked: false }; })
+          .then(function (j) { if (j && j.locked === true) kick(); else reveal(); })
+          .catch(reveal);
+      } catch (e) { reveal(); }
+    };
+    check();
+    setInterval(check, 15000);
+    addEventListener('focus', check);
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) check(); });
   }
 
   if (ok) window.bgLaunchCode = function () { var t = Date.now().toString(36); return t + '.' + hash(t + SALT); };
