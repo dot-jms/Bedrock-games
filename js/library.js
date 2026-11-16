@@ -8,7 +8,7 @@
   var SANDBOX = 'allow-scripts allow-pointer-lock allow-forms allow-popups allow-modals allow-downloads allow-orientation-lock';
   var STAR = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg>';
   var PICKS = ['Slope', 'Run 3', 'Subway Surfers', 'Cookie Clicker', '2048', 'Geometry Dash', 'Drive Mad', 'Retro Bowl', 'Fireboy and Watergirl', 'Smash Karts', '1v1.lol', 'Bad Ice Cream', 'Flappy Bird', 'Crossy Road', 'Basketball Stars', 'Tunnel Rush', 'Hextris', 'Doodle Jump', 'Happy Wheels', 'Tetris', 'Pac-Man', 'Snake', 'Among Us', 'Stickman Hook'];
-  var NAV = [['home', 'Home'], ['all', 'All games'], ['favs', 'Favorites'], ['recent', 'Recent'], ['flash', 'Flash'], ['minecraft', 'Minecraft'], ['bedrock', 'Original']];
+  var NAV = [['home', 'Home'], ['all', 'All games'], ['favs', 'Favorites'], ['recent', 'Recent'], ['flash', 'Flash'], ['bedrock', 'Original']];
   var TILE_W = 168, TILE_H = 150, GAP = 14;
 
   var favs = new Set(load('bg_favs', []));
@@ -138,7 +138,7 @@
 
     var hero = document.createElement('div'); hero.className = 'hero';
     hero.innerHTML = '<div><h2>Pick something and play.</h2><p></p></div><div class="hero-btns"><button class="pbtn go" type="button" id="h-surprise">Surprise me</button><button class="pbtn" type="button" id="h-all">Browse all games</button></div>';
-    hero.querySelector('p').textContent = games.length.toLocaleString() + ' games, from quick arcade runs to full Minecraft clients.';
+    hero.querySelector('p').textContent = games.length.toLocaleString() + ' games, from quick arcade runs to big 3D games.';
     h.appendChild(hero);
     hero.querySelector('#h-surprise').addEventListener('click', function () { openGame(games[Math.floor(Math.random() * games.length)]); });
     hero.querySelector('#h-all').addEventListener('click', function () { go('all'); });
@@ -149,7 +149,6 @@
     if (fv.length) shelf('Your favorites', fv.slice(0, 20), 'favs');
     shelf('Popular picks', picks, 'all');
     shelf('Flash classics', shuffle(games.filter(function (g) { return g.tags.indexOf('flash') !== -1; })).slice(0, 20), 'flash');
-    shelf('Minecraft', games.filter(function (g) { return g.tags.indexOf('minecraft') !== -1; }).slice(0, 20), 'minecraft');
     shelf('Original Bedrock games', shuffle(games.filter(function (g) { return g.tags.indexOf('bedrock') !== -1; })).slice(0, 20), 'bedrock');
   }
 
@@ -192,7 +191,6 @@
     d.querySelector('.name').title = g.title;
     var tag = d.querySelector('.tag');
     if (g.tags.indexOf('flash') !== -1) { tag.textContent = 'Flash'; tag.hidden = false; }
-    else if (g.tags.indexOf('minecraft') !== -1) { tag.textContent = 'Minecraft'; tag.hidden = false; }
     var cands = thumbCandidates(g), ci = 0;
     (function tryNext() {
       if (ci >= cands.length) return;
