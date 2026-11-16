@@ -2,11 +2,9 @@ Games that still need a thumbnail. Save the image as thumbs/<filename>.png (or .
 
 1 On 1 Soccer  ->  cl1on1soccer.png
 1 On 1 Tennis  ->  cl1v1tennis.png
-10 Minutes Till Dawn  ->  cl10minutestildawn.png
 10 More Bullets  ->  cl10morebullets.png
 10-103 Null Kevin  ->  clnullkevin.png
 12 Mini Battles  ->  cl12minibattles.png
-2-3-4 Player Games  ->  cl234playergame.png
 20 Small Mazes  ->  cl20smallmazes.png
 2048 Cupcakes  ->  cl2048cupcakes.png
 2D Shooting  ->  cl2Dshooting.png
@@ -78,14 +76,11 @@ Apple Shooter  ->  clappleshooter.png
 Apple Worm  ->  clappleworm.png
 Aquapark.io  ->  claquaparkio.png
 Archery World Tour  ->  clarcheryworldtour.png
-Archesspelago  ->  clarchesspelago.png
 Armor Mayhem 2  ->  clarmormayhem2.png
 Arsonate  ->  clarsonate.png
 As Duty Demands  ->  clasdutydemands.png
 Ascent  ->  clascent.png
-Assessment Examination  ->  classesmentexaminationque.png
 Asteroids  ->  clasteroidsALT.png
-Aviamasters  ->  claviamastersbuggy.png
 Awesome Pirates  ->  clAwesomePirates.png
 Awesome Planes  ->  clawesomeplanes.png
 Awesome Tanks  ->  clawesometanks.png
@@ -102,12 +97,10 @@ Bad Ice Cream  ->  clbadicecream.png
 Bad Ice Cream 2  ->  clbadicecream2.png
 Bad Ice Cream 3  ->  clbadicecream3.png
 Bad Monday Simulator  ->  clbadmondaysimulator.png
-Bad Parenting  ->  clbadparenting.png
 Bad Piggies  ->  clbadpiggies.png
 Bad Piggies (LATEST)  ->  clbadpiggieslatest.png
 Bad Time Simulator  ->  clbadtimesim.png
 Baldi's Basics The Ultra Decompile  ->  clbaldidecomp.png
-Baldi’s Basics  ->  clbaldisbasics.png
 Baldi’s Basics Remastered  ->  clbaldisbasicsremaster.png
 Baldi’s Fun New School Ultimate  ->  clbaldisfunnewschoolultimate.png
 Ball Blast  ->  clballblast.png
@@ -135,7 +128,6 @@ Battle Simulator  ->  clbattlesim.png
 Battles  ->  clbattles.png
 Beach Boxing Simulator  ->  clbeachboxingsim.png
 Bearbarians  ->  clbearbarians.png
-Bearsus  ->  clbearsus.png
 BERGENTRUCK 201x  ->  clbergentruck201x.png
 Better Tunnel Rush  ->  cltunnelrushbetter.png
 BFDI Branches  ->  clBFDIBranches.png
@@ -260,7 +252,6 @@ CircloO 2  ->  clCircloO2.png
 Civiballs  ->  clciviballs.png
 Civiballs 2  ->  clciviballs2.png
 Clash N Slash  ->  clclashnslash.png
-Clash Of Vikings  ->  clclashofvikings.png
 Class of ‘09  ->  clclassof09.png
 Cleanup.io  ->  clcleanupio.png
 Clear Vision  ->  clclearvision.png
@@ -292,7 +283,6 @@ Cover Orange Players Pack 3  ->  clcoverorangeplayerspack3.png
 Crank It!  ->  clcrankit!.png
 Crazy Cars  ->  clcrazycars.png
 Crazy Cattle 3D  ->  clcrazycattle3d.png
-Crazy Chicken 3D  ->  clcrazychicken3D.png
 Crazy Crash Landing  ->  cldubstep.png
 Crazy Motorcycle  ->  clcrazymotorcycle.png
 Crazy Penguin Catapult  ->  clcrazypenguincatapult.png
@@ -347,7 +337,6 @@ Dino Run - Enter Planet D  ->  cldinorunenterplanetd.png
 Dino Run - Marathon of Doom  ->  cldinorunmarathonofdoom.png
 Dire Decks  ->  cldiredecks.png
 Doblox  ->  cldoblox.png
-Doge Miner 2  ->  cldogeminer2.png
 Doki Doki Literature Club  ->  cldokidokiliteratureclub.png
 Dome Romantik  ->  cldomeromantik.png
 Don't Escape  ->  cldontescape.png
@@ -378,7 +367,6 @@ Driven Wild  ->  cldrivenwild.png
 DTA 6  ->  cldta6.png
 Duck Life 4  ->  clducklife4.png
 Duck Life 5  ->  clducklfe5.png
-Duck Life Battle  ->  clducklifebattle.png
 Duck Life Space  ->  clducklifespace.png
 Ducklings.io  ->  clducklingsio.png
 DUD  ->  cldud.png
@@ -445,7 +433,6 @@ Feed Us 2  ->  clfeedus2.png
 Feed Us 3  ->  clfeedus3.png
 Feed Us 4  ->  clfeedus4.png
 Feed Us 5  ->  clfeedus5.png
-Final Earth 2  ->  clfinalearth2.png
 Final Fantasy Sonic X Episode 1  ->  clFFsonic1.png
 Final Fantasy Sonic X Episode 2  ->  clFFsonic2.png
 Final Fantasy Sonic X Episode 3  ->  clFFsonic3.png
@@ -459,7 +446,6 @@ Fireblob  ->  clfireblob.png
 Fireboy and Watergirl  ->  clfireboyandwatergirl.png
 Fireboy and Watergirl 2  ->  clfireboyandwatergirl2.png
 Fireboy and Watergirl 3  ->  clfireboyandwatergirl3.png
-Fish Eat Getting Big  ->  clfisheatgettingbig.png
 Fisquarium  ->  clfisquarium.png
 Five Fights at Freddies  ->  clffaf.png
 Five Nights at Baldis Redone  ->  clfivenightsatbaldisredone.png
@@ -643,7 +629,6 @@ Gobble  ->  clgobble.png
 Going Balls  ->  clgoingballs.png
 Gold Digger FRVR  ->  clgolddiggerfrvr.png
 Gold Miner  ->  clgoldminer.png
-Golf Battle  ->  clgolfbattle.png
 Golf Sunday  ->  clgolfsunday.png
 Google Baseball  ->  clgooglebaseball.png
 Google Dino  ->  clgoogledino.png
@@ -653,7 +638,6 @@ Grand Action Simulator: New York  ->  clgrandactionsimulator-ny.png
 Grand Escape Prison  ->  clgrandescapeprison.png
 Granny  ->  clgrannyy.png
 Granny 2  ->  clgranny22.png
-Granny 3  ->  clgranny3.png
 Granny Creepy  ->  clgrannycreepy.png
 Granny Nightmare  ->  clgrannynightmare.png
 Granny Online  ->  clgranny2.png
@@ -661,7 +645,6 @@ Gravity  ->  clgravity.png
 Gravity Mod  ->  clgravitymod.png
 Greener Grass Awaits  ->  clgreenergrassawaits.png
 Grey Box Testing  ->  clgrey-box-testing.png
-GRN  ->  clgrn.png
 Grow A Garden  ->  clgrowagarden.png
 Grow Your Garden  ->  clgrowyourgarden.png
 Growden.io  ->  clgrowdenio.png
@@ -685,7 +668,6 @@ Hanger  ->  clhanger.png
 Hanger 2  ->  clhanger2.png
 Happy Room  ->  clhappyroom.png
 Happy Wheels  ->  clhappywheels.png
-Hardware Tycoon  ->  clhardwaretycoon.png
 Harold's Bad Day  ->  clHaroldsbadday.png
 Harvest.io  ->  clharvestio.png
 Haunt The House  ->  clhauntthehouse.png
@@ -769,13 +751,11 @@ Johnny Trigger  ->  cljohnnytrigger.png
 Johnny Upgrade  ->  cljohnnyupgrade.png
 Journey Downhill  ->  cljourneydownhill.png
 Jumbo Mario  ->  cljumbomario.png
-Jumping Shell  ->  cljumpingshell.png
 Jungle Deer Hunting  ->  cljungledeerhunting.png
 Just Hit The Button  ->  cljusthitthebutton.png
 Justfall.lol  ->  cljustfalllol.png
 Kalikan  ->  clkalikan.png
 Kanye Zone  ->  clkanyezone.png
-Karate Bros  ->  clkaratebros.png
 Karlson  ->  clkarlson.png
 Kart Bros  ->  clkartbros.png
 Kill The Ice Age Baby Adventure  ->  clkilltheiceagebabyadventure.png
@@ -838,7 +818,6 @@ Medieval Shark  ->  clmedievalshark.png
 Mega Miner  ->  clmegaminer.png
 Megachess  ->  clmegachess.png
 Melon Playground  ->  clmelonplayground.png
-Merge Round Racers  ->  clmergeroundracers.png
 Miami Shark  ->  clmiamishark.png
 Micro Life  ->  clmicrolife.png
 Mighty Knight  ->  clmightyknight.png
@@ -869,7 +848,6 @@ Monster Tracks  ->  clmonstertracks.png
 Monster Truck Curfew  ->  clmonstertruckcurfew.png
 Monster Truck Port Stunt  ->  clmonstertruckportstunt.png
 Motherload  ->  clmotherload.png
-Moto Road Rash  ->  clmotoroadrash.png
 MotoX3m Pool Party  ->  clmotox3mpoolparty.png
 MotoX3m Spooky Land  ->  clmotox3mspookyland.png
 MotoX3m2  ->  clmotox3m2.png
@@ -906,7 +884,6 @@ Not Your Pawn  ->  clnotyourpawn.png
 Nubby’s Number Factory  ->  clnubbysnumberfactory.png
 Nuts and Bolts Screwing Puzzle  ->  clNutsandBoltsScrewingPuzzle.png
 Obby 99% Will Lose  ->  clobby-99-will-lose.png
-Obby But You’re On a Bike  ->  clobbybike.png
 Obby Cart  ->  clobbycart.png
 Obby For Lumber  ->  cllumberobby.png
 Obby Rainbow Tower  ->  clobbyrainbowtower.png
@@ -916,7 +893,6 @@ Obby Swing  ->  clobbyswing.png
 Obby Yard Sale  ->  clobbyyardsale.png
 Obby: +1 Jump per Click  ->  clobby1jumpperclick.png
 Obey the Game  ->  clobeythegame.png
-Odd Bot Out  ->  cloddbotout.png
 Offline Paradise  ->  clofflineparadise.png
 Oh Flip!  ->  clohflip.png
 Omega Layers  ->  clomegalayers.png
@@ -934,7 +910,6 @@ osu!  ->  closu.png
 Other Car Driving Simulator  ->  clucds.png
 OutHold  ->  clouthold.png
 OverBurden  ->  cloverburden.png
-OVO  ->  clovofixed.png
 OVO 3 Dimensions  ->  clovodimensions.png
 Papa Louie Night Hunt 2  ->  clpapalouienighthunt2.png
 Papa Louie When Burgers Attack  ->  clpapalouiewhenburgersattack.png
@@ -999,7 +974,6 @@ Pokemon Tower Defense  ->  clpokemontowerdefense.png
 PokéPath TD  ->  clpokepath.png
 Police Pursuit 2  ->  clpolicepursuit2.png
 Pom Gets Wi-Fi  ->  clpomgetsinternet.png
-Poor Bunny  ->  clpoorbunny.png
 Porklike  ->  clporklike.png
 Portal 2D  ->  clportal2d.png
 Portal Defenders Fast Break  ->  clportaldefendersfastbreak.png
@@ -1018,12 +992,10 @@ Processor Tycoon  ->  clprocessortycoon.png
 Pullfrog  ->  clpullfrog.png
 Pumpkin Run 64  ->  clpumpkinrun.png
 Punch the Trump  ->  clpunchthetrump.png
-Puppet Hockey  ->  clpuppethockey.png
 Puppet Master  ->  clpuppetmaster.png
 Quake III Arena  ->  clquake3.png
 Quantum Clicker  ->  clQuantumClicker.png
 QWOP  ->  clqwop.png
-R.E.P.O bad  ->  clrepobad.png
 Raft Wars  ->  clraftwars.png
 Raft Wars 2  ->  clraftwars2.png
 Ragdoll Archers  ->  clragdollarchers.png
@@ -1043,7 +1015,6 @@ Reach the Core  ->  clreachthecore.png
 Real Flight Simulator  ->  clrealflightsim.png
 Rebuild  ->  clrebuild.png
 Rebuild 2  ->  clrebuild2.png
-Recoil  ->  clrecoil.png
 Red Ball  ->  clredball.png
 Red Ball 2  ->  clredball2.png
 Red Ball 3  ->  clredball3.png
@@ -1053,10 +1024,8 @@ Red Ball 4 vol.3  ->  clredball4vol3.png
 Red Handed  ->  clredhanded.png
 Red Tie Runner  ->  clredtierunner.png
 Red vs. Blue  ->  clredvsblue2.png
-Red vs. Blue War  ->  clredvsbluewar.png
 Reign of Centipede  ->  clreignofcentipede.png
 Renegades  ->  clrenegades.png
-Resizer  ->  clresizer.png
 Resort Empire  ->  clresortempire.png
 Retro Bowl College  ->  clretrobowlcollege.png
 Retro Highway  ->  clretrohighway.png
@@ -1092,12 +1061,10 @@ Rooftop Run  ->  clrooftoprun.png
 Rooftop Snipers 2  ->  clrooftopsnipers2.png
 Room Clicker  ->  clroomclicker.png
 Roulette Hero  ->  clroulettehero.png
-Roulette Knight  ->  clrouletteknight.png
 Run  ->  clrun.png
 Run 2  ->  clrun-2.png
 Run 3  ->  clrun3.png
 Running Fred  ->  clrunningfred.png
-Russian Buckshot Roulette  ->  clrussianbuckshot.png
 Russian Car Driver  ->  clrussiancardriver.png
 Russian CS GO-6  ->  clcs6.png
 Russian Sandbox  ->  clrussiansandbox.png
@@ -1116,7 +1083,6 @@ Scary Maze Game  ->  clscarymazegame.png
 Scary Shawarma  ->  clscaryshawarma.png
 Scary Teacher 3D  ->  clscaryteacher3d.png
 Schoolboy Runaway  ->  clschoolboyrunaway.png
-Scrap Metal 3  ->  clscrapmetal3.png
 Scuba Bear  ->  clscubabear.png
 Sea Mongrel  ->  clseamongrel.png
 Self  ->  clself.png
@@ -1140,8 +1106,6 @@ Sift Heads Cartels Act 1  ->  clshc1.png
 Sift Heads Cartels Act 2  ->  clshc2.png
 Sift Heads Cartels Act 3  ->  clshc3.png
 Sift Heads World Ultimatum  ->  clshwultimatem.png
-Silhouette Showdown  ->  clsiloshowdow.png
-Six ways to die  ->  clsixwaystodie.png
 Skibidi in the Backrooms  ->  clskibidiinthebackrooms.png
 Skibidi Shooter  ->  clskibidishooter.png
 Skibidi toilet.io  ->  clskibididibidygyattohiorizzingallovertheplacestillwatermangotheoryfemboydrool.png
@@ -1159,7 +1123,6 @@ Slipways  ->  clslipways.png
 Slither.io  ->  clslitherio.png
 Slope 2 player  ->  clslope2player.png
 Slope 3  ->  clslope3.png
-Slot or Not  ->  clslotornot.png
 Slow Roads  ->  clslowroads.png
 Smash Karts  ->  clsmashkartsworking.png
 Snail Bob  ->  clsnailbob.png
@@ -1173,10 +1136,8 @@ Sniper v2  ->  clsniperv2.png
 Snow Rider 3D  ->  clsnowrider.png
 Snow Road  ->  clsnowroad.png
 Snowball.io  ->  clsnowballio.png
-Soccer Bros  ->  clsoccerbros.png
 Soccer Random  ->  clsoccerrandomgood.png
 Soda Simulator  ->  clsodasimulator.png
-Solar Sandbox  ->  clsolarsandbox.png
 Solar Smash  ->  clsolarsmash.png
 Solitaire  ->  clsolitaire.png
 Sonic 1 Mobile  ->  clsonic1mobile.png
@@ -1193,12 +1154,10 @@ Space is Key  ->  clspaceiskey.png
 Space is Key 2  ->  clspaceiskey2.png
 Space is Key Xmas  ->  clspaceiskeyxmas.png
 Space Wars BattleGround  ->  clspacewarsbattleground.png
-Space Waves  ->  clspacewaves.png
 Spacebar Clicker  ->  clspacebarclicker.png
 Special Mission  ->  clspecialmission.png
 Speed Per Click  ->  clspeedperclick.png
 Speed Stars  ->  clspeedstars.png
-Spelunky Classic HD  ->  clspelunky.png
 Spewer  ->  clspewer.png
 Spiral Roll  ->  clspiralroll.png
 Spongebob PowerKart Grand Prix  ->  clSpongebobPowerKartGrandPrix.png
@@ -1209,13 +1168,11 @@ Sprunki  ->  clsprunki.png
 Sprunki Clicker  ->  clsprunkiclicker.png
 Squid Playground  ->  clsquidplayground.png
 Stackball.io  ->  clstackballio.png
-Stacktris  ->  clstacktris.png
 State.io  ->  clstateio.png
 Station 141  ->  clstation141.png
 Station Meltdown  ->  clstationmeltdown.png
 Station Saturn  ->  clstationsaturn.png
 Steak and Jake  ->  clsteakandjake.png
-Steal A Brainrot  ->  clsupitdept.png
 Stealth Assassin  ->  clstealthassassin.png
 Stealth Master  ->  clstealthmaster.png
 Steel Surge Revolution  ->  clsteelsurge.png
@@ -1234,7 +1191,6 @@ Stickman Clash  ->  clstickmanclash.png
 Stickman Duel  ->  clstickmanduel.png
 Stickman gta City  ->  clstickmangtacity.png
 Stickman Hook  ->  clstickmanhook.png
-Stickman Kingdom Clash  ->  clStickmanKingdomclash.png
 Stickman Kombat 2D  ->  clstickmankombat2d.png
 Stone Grass Mowing Simulator  ->  clgrassmowing.png
 Storm the House  ->  clstormthehouse.png
@@ -1281,12 +1237,10 @@ Super Mario 64 (webgl)  ->  clmario64webgl.png
 Super Mario Bros  ->  clsupermariobros.png
 Super Mario Construct  ->  clsmc.png
 Super Mario Crossover  ->  clsmbcrossover.png
-Super Momos Crushers  ->  clmomoscrushers.png
 Super Monkey Ball 1 & 2  ->  clsmb12.png
 Super Oliver World  ->  clsuperoliverworld.png
 Super Onion Boy 2  ->  clsuperonionboy2.png
 Super Pickleball Adventure  ->  clsuperpickleballadventure.png
-Super Santa Kicker  ->  clsupersantakicker.png
 Super Santa Kicker 2  ->  clsupersantakicker2.png
 Super Smash Flash  ->  clsupersmashflash.png
 Super Smash Flash 2  ->  clsupersmashflash2.png
@@ -1297,17 +1251,14 @@ Survival Race v2  ->  clsurvivalracev2.png
 Survivor.io  ->  clsurvivorio.png
 Sushi Cat  ->  clsushicat.png
 Sushi Unroll  ->  clsushiunroll.png
-Switchblade  ->  clswitchblade.png
 Swordfight  ->  clswordfight.png
 Swords and Sandals  ->  clswordsandsandals2.png
 Swords and Souls  ->  clswordsandsouls.png
 Sydney Shark  ->  clsydneyshark.png
 Table Tanks  ->  cltabletanks.png
-Table Tennis World Tour  ->  cltabletennisworldtour.png
 Taco Stand  ->  cltacostand.png
 Tag  ->  cltag-.png
 Tag (coolmathgames)  ->  cltagcm.png
-Tail of The Dragon  ->  cltailofthedragon.png
 Taisei Project  ->  cltaisei.png
 Takeover  ->  cltakeover.png
 Tall.io  ->  cltallio.png
@@ -1350,17 +1301,14 @@ Throw a Potato Again  ->  clthrowapotatoagain.png
 Thwack  ->  clthwack.png
 Time Shooter 2  ->  cltimeshooter2.png
 Time Shooter 3  ->  cltimeshooter3.png
-Timewarriors  ->  cltimewarriors.png
 Tiny Fishing  ->  cltinyfishing.png
 To a Starling  ->  cltoastarling.png
 Toasterball  ->  cltoasterball.png
 Tomb of the Mask  ->  cltotm.png
 Tomorrow And Yesterday  ->  cltommorowandyesterday.png
-Top Speed Racing 3D  ->  cltopspeedracing3d.png
 Tower Blocks  ->  cltowerblocks.png
 Tower Crash 3D  ->  cltowercrash3d.png
 Tower Wizard  ->  cltowerwizard.png
-Townscraper  ->  cltownscraper.png
 Trace  ->  cltrace.png
 Traffic Jam 3D  ->  cltrafficjam3d.png
 Tralalero Tralala Escape Tung Tung Tung Sahur  ->  cltralalerotralalaescapetungtungtungsahur.png
@@ -1397,11 +1345,8 @@ Ultrakill (buggy)  ->  clultrakill.png
 Uncanny Cat Golf  ->  cluncannycatgolf.png
 Underneath  ->  clunderneath.png
 Undertale Yellow  ->  clundertaleyellow.png
-Undertale: Last Breath  ->  clundertalelb.png
 Unfair Mario  ->  clunfairmarioworkquestionmark.png
 Unfair Undyne  ->  clunfairundyne.png
-Unicycle Hero  ->  clunicyclehero.png
-Unitres Dreams  ->  clunitresdreams.png
 Uno  ->  cluno.png
 Untime  ->  cluntime.png
 Upgrade Complete  ->  clupgradecomplete.png
@@ -1438,7 +1383,6 @@ Wermhole  ->  clwermhole.png
 Whack the Thief  ->  clwhackthetheif.png
 Whack Your Boss  ->  clwhackyourboss.png
 Whack Your Computer  ->  clwhackyourcomputer.png
-Wheelie Bike  ->  clwheeliebike.png
 Wheely  ->  clwheely.png
 Wheely 2  ->  clwheely2.png
 Wheely 3  ->  clwheely3.png
